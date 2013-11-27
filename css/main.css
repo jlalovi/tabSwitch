@@ -13,28 +13,34 @@
 body {
 	background: #d3d4d6;
 }
+img {
+	float: left;
+	margin: 20px 20px 0px 30px;
+}
 a {
 	text-decoration: none;
-	color: #373b3c;
-	float: left;	
+	color: #373b3c;	
 }
 	a:hover {
 		text-decoration: underline;
 	}
 p {
 	font-size: 13px;
-	font-weight: bold;
-	color: #373b3c;
-	float: left;
-	
+	font-weight: 700;
+	color: #666a6d;
+	margin: 8px 0;	
 }
 	p:last-child {
 		font-size: 11px;
 		font-weight: normal;
 	}
 hr {
+	border: 0px; 
+	background-color: #e6e6e6;
+	height: 1px; /*Trick with these 3 declarations: border: 0px, background-color and height:1px. Using (border: solid 1px #color), makes line wider*/
 	width: 310px;
 	margin: 0 auto;
+	margin-top: -5px;
 }
 
 .fontawesome-heart {
@@ -46,38 +52,75 @@ hr {
 	width: 370px;
 	height: 375px;
 	background: #ffffff;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	-webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+	-moz-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+	box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
 }
-	.tabs{
-		background: #f7f7f7;
+	.tabs {
 		height: 75px;
 		width: 370px;
 	}
 		.tabs ul {
 			padding: 0;
 			margin: 0;
+			list-style-type: none;
 		}
 		.tabs li {
-			display: inline-block;
+			float: left;
 			text-transform: uppercase;
 			text-align: center;
-			line-height: 75px;
+			font-size: 15px;
+			font-weight: bold;
+			color: #35393c;
+			line-height: 75px;		
 		}
 		.popular {
 			width: 120px;
 		}
+			.selected {
+				background: #ffffff;
+				border: solid 1px #ffffff;
+			}
 		.comments {
 			width: 140px;
 		}
 		.recent {
 			width: 110px;
 		}
-
+			.noSelected {
+				background: #f7f7f7; 
+				border: solid 1px #e6e6e6;
+				cursor: pointer;
+			}
+				.noSelected:hover {
+					background: #EBEBEB;
+				}
 	.tab-containers {
 		height: 300px;
-		position: relative; /*Every container is absolute to this div element*/		
+		margin-top: 8px;				
 	}
 		.section {
 			height: 100px;
 		}
-
+			.right-section {
+				width: 210px;
+				float: left;
+				margin-top: 10px;
+			}
+				.section-comments{
+					padding: 5px 15px 0 25px;
+				}
+					.nickName {
+						color: #c8402a;
+					}
+		.hidden {  
+			display: none;
+		}
+		.likes:hover {
+			color: #e8604a;
+			cursor: pointer;
+		}
 
